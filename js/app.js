@@ -3,7 +3,7 @@ if (navigator.serviceWorker) {
     let swLocation = '/sw.js';
 
     if (url.includes('twittor')) {
-        swLocation = `/twittor${ swLocation }`;
+        swLocation = `/twittor/sw.js`;
     }
 
     navigator.serviceWorker.register(swLocation);
