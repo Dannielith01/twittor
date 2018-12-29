@@ -1,5 +1,12 @@
 if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/sw.js');
+    let url = window.location.href;
+    let swLocation = '/sw.js';
+
+    if (url.includes('twittor')) {
+        swLocation = `/twittor${ swLocation }`;
+    }
+
+    navigator.serviceWorker.register(swLocation);
 }
 
 
